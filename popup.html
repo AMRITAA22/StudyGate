@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Study Gate - Settings</title>
+  <style>
+    body { font-family: Arial, sans-serif; min-width: 300px; padding:12px; }
+    label { display:block; margin-top:8px; }
+    select, input[type=text], input[type=number] { width:100%; padding:6px; margin-top:4px; }
+    button { margin-top:12px; padding:8px 12px; }
+  </style>
+</head>
+<body>
+  <h3><img src="icon.png" width="24" style="vertical-align:middle"> Study Gate</h3>
+  <div>
+    <label>Subjects (comma separated)</label>
+    <input id="subjects" type="text" placeholder="math,science,history">
+    <label>Difficulty</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <label>Quiz size (number of questions)</label>
+    <input id="quizSize" type="number" min="5" max="20" value="10">
+    <label>Allow duration after pass (minutes)</label>
+    <input id="allowMinutes" type="number" min="5" max="1440" value="30">
+    <label>Theme</label>
+    <select id="theme">
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+    </select>
+    <button id="save">Save settings</button>
+    <div id="status" style="margin-top:8px;color:green"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
